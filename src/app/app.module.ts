@@ -3,16 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {AceTabComponent} from './old/ace-tab.component';
+import {DataSource} from './data-source';
+import {CategoryFilterPipe} from './old/category-filter.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AceTabComponent,
+    CategoryFilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataSource],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
